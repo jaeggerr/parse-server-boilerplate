@@ -51,5 +51,5 @@ Make sure you have [Docker](https://www.docker.com/) installed and run the comma
 # In the project root folder
 $ npm run transpile # Transpile the cloud code if not already done
 $ docker-compose up # Run the database
-$ npm run start --env <environment> # Run the server in the wished environemnt. You can just run npm start to use the default prod environment.
+$ npm run start -- --env <environment> # Run the server in the wished environemnt. You can just run npm start to use the default prod environment.
 ```
