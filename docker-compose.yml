@@ -6,38 +6,6 @@ services:
       - "5432:5432"
     environment:
       POSTGRES_USER: parse
-      POSTGRES_PASSWORD: x5Y4EXNmJk2W6t2K
+      POSTGRES_PASSWORD: YE3ndjb7XahKwSpk
     volumes:
-      - ./parse-server/postgresql/data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready"]
-      interval: 5s
-      timeout: 30s
-      retries: 5
-
-  parse:
-    image: parseplatform/parse-server
-    ports:
-      - "1337:1337"
-    environment:
-      PARSE_SERVER_APPLICATION_ID: parse-server-template
-      PARSE_SERVER_MASTER_KEY: mpcZ7ZMmQnj2NKnu
-      PARSE_SERVER_DATABASE_URI: postgres://parse:x5Y4EXNmJk2W6t2K@postgres:5432
-      PORT: 1337
-      PARSE_SERVER_URL: 'http://localhost:1337/parse'
-      PARSE_SERVER_ALLOW_CLIENT_CLASS_CREATION: 0
-      PARSE_SERVER_CLOUD_CODE_MAIN: '/parse-server/cloud/main.js'
-      PARSE_SERVER_FILES_ADAPTER: '{
-        "module": "parse-server-fs-adapter",
-        "options": {
-          "filesSubDirectory": "."
-        }
-      }'
-    depends_on:
-      postgres:
-        condition: service_healthy
-    volumes:
-      - ./parse-server/cloud:/parse-server/cloud
-      - ./parse-server/files:/parse-server/files
-    links:
-      - postgres
+      - ./postgresql/data:/var/lib/postgresql/data

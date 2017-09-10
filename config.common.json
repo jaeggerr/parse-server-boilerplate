@@ -1,0 +1,11 @@
+{
+  "appId": "parse-server-boilerplate",
+  "appName": "Parse Server Boilerplate",
+  "allowClientClassCreation": false,
+  "filesAdapter": {
+    "module": "parse-server-fs-adapter",
+    "options": {
+      "filesSubDirectory": "."
+    }
+  }
+}

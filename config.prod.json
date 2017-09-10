@@ -1,0 +1,6 @@
+{
+  "masterKey": "CjxBZYWvNJp9nddR",
+  "port": 1337,
+  "serverURL": "http://localhost:1337/parse",
+  "databaseURI": "postgres://parse:YE3ndjb7XahKwSpk@localhost:5432/parse"
+}
