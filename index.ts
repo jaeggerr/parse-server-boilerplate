@@ -24,7 +24,7 @@ if (environment) {
 }
 
 if (!config.cloud) {
-  config.cloud = path.join(__dirname, 'cloud/main.js')
+  config.cloud = path.join(__dirname, 'cloud/main.ts')
 }
 
 let app = express()

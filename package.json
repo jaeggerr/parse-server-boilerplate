@@ -1,11 +1,10 @@
 {
   "name": "parse-server-boilerplate",
-  "version": "0.1.0",
-  "description": "Template for Parse Server with PostgreSQL running on Docker and File System adapter",
+  "version": "0.2.0",
+  "description": "Template for Parse Server with PostgreSQL and File System adapter",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "transpile": "tsc --p tsconfig.json",
-    "start": "node index.js"
+    "start": "ts-node index.ts"
   },
   "devDependencies": {
     "@types/express": "^4.0.37",
@@ -13,6 +12,7 @@
     "@types/parse": "^2.4.0",
     "@types/request": "^2.0.3",
     "eslint-plugin-typescript": "^0.3.0",
+    "ts-node": "^3.3.0",
     "tslint": "^5.5.0",
     "tslint-config-standard": "^6.0.1",
     "typescript": "^2.4.2"
