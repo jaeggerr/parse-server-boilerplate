@@ -6,7 +6,7 @@ interface SetACLOptions {
     read?: boolean
     write?: boolean
   }
-  users: {
+  users?: {
     user: Parse.User | string
     read?: boolean
     write?: boolean
@@ -36,11 +36,4 @@ export function setACL (object: Parse.Object, options: SetACLOptions) {
       if (!isUndefined(userSettings.write)) acl.setReadAccess(userSettings.user as any, userSettings.write)
     }
   }
-}
-
-export function hasDirtyKey (object: Parse.Object, key: string) {
-  for (let dirtyKey of object.dirtyKeys()) {
-    if (key === dirtyKey) return true
-  }
-  return false
 }
