@@ -1,6 +1,6 @@
 {
   "name": "parse-server-boilerplate",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Template for Parse Server with PostgreSQL and File System adapter",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

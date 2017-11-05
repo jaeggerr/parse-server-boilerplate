@@ -26,14 +26,15 @@ export function setACL (object: Parse.Object, options: SetACLOptions) {
   // Public
   if (options.public) {
     if (!isUndefined(options.public.read)) acl.setPublicReadAccess(options.public.read)
-    if (!isUndefined(options.public.write)) acl.setPublicReadAccess(options.public.write)
+    if (!isUndefined(options.public.write)) acl.setPublicWriteAccess(options.public.write)
   }
 
   // Users
   if (options.users) {
     for (let userSettings of options.users) {
       if (!isUndefined(userSettings.read)) acl.setReadAccess(userSettings.user as any, userSettings.read)
-      if (!isUndefined(userSettings.write)) acl.setReadAccess(userSettings.user as any, userSettings.write)
+      if (!isUndefined(userSettings.write)) acl.setWriteAccess(userSettings.user as any, userSettings.write)
     }
   }
+  object.setACL(acl)
 }
