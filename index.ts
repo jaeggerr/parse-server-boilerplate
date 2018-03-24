@@ -46,7 +46,7 @@ if (config.https) {
   // HTTPS
   const privateKey = fs.readFileSync(config.https.key, 'utf8')
   const certificate = fs.readFileSync(config.https.cert, 'utf8')
-  server = https.createServer({key: privateKey, cert: certificate}, app)
+  server = https.createServer({ key: privateKey, cert: certificate }, app)
   server.listen(config['port'], function () {
     console.log(`${config.appName} parse server running on port ${config.port}`)
   })
